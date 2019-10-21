@@ -1,42 +1,49 @@
-﻿<DOCTYPE html>
-    <html>
-    <head>
-      <b> Welcome to our portfolio page! </b>
-  
-    </head>
-    <title> helikau</title>
-    <meta charset="utf-8">
-    <title>Finding Me</title>
-    <script>function getLocation()
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<title> helikau</title>
+
+<h1> <b> <i> Welcome to our portfolio page! </i> </b> </h1>
+<hr />
+<p>Here you can see our artwork </p>
+
+<head />
+
+        <body bgcolor="black" text="grey">
+
+        <meta charset="utf-8">
+            <title>Finding Me</title>
+            <script>
+    function getLocation()
+            
+            
+            if (navigator.geolocation) {
+
+
+                navigator.geolocation.getCurrentPosition(getPosition);
+            } else { // Not supported
+                alert("Oops! This browser does not support HTML Geolocation.");
+            }
+          }
+          function getPosition(position)
 {
+                document.getElementById("location").innerHTML =
+                "Latitude: " + position.coords.latitude + "<br>" +
+                "Longitude: " + position.coords.longitude;
+            }
+
+            // To add catchError(positionError) function</script>
+
+<h2>Finding Me</h2>
+<button onclick="getLocation()">Where am I?</button>
+<p id="location"></p>
 
 
-  if (navigator.geolocation) { 
-
-    // To add PositionOptions
-
-	navigator.geolocation.getCurrentPosition(getPosition);
-  } else { // Not supported
-	alert("Oops! This browser does not support HTML Geolocation.");
-  }
-}
-function getPosition(position)
-{
-  document.getElementById("location").innerHTML =
-	  "Latitude: " + position.coords.latitude + "<br>" +
-	  "Longitude: " + position.coords.longitude;
-}
-
-// To add catchError(positionError) function</script>
-    </head>
-    <body>
-        <h1>Finding Me</h1>
-        <button onclick="getLocation()">Where am I?</button>
-        <p id="location"></p>
-
-
-        <p>Portfolion tarkoitus:</p> <ol> <li>Esitellä taitoja ja ideoita.</li> <li>Hommata meille töitä.</li> <li> Ota sis yhteyttä! </li>   </ol>
+<p>Portfolion tarkoitus:</p>
+<ol> <li>Esitellä taitoja.</li> <li>Luoda kiinnostusta.</li> <li> Ota yhteyttä! </li>   </ol>
 
 
     </body>
-    </html>
+</html>
