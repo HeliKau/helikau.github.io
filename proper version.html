@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title> portfolio</title>
+    <style type="text/css">
+        .CenterAll {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Outer {
+            background-color: white;
+            width: 800px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .Column {
+            width: 400px;
+            text-align: left;
+            float: left;
+        }
+        .Clear {
+            clear: both;
+        }
+        .pad {
+            margin: 5px 5px 5px5px;
+        }
+    </style>
+</head>
+
+<html>
+    <!-- Calling out title on canvas-->
+        <script>
+                function WelcomeText()
+                {
+                var canvas, context;
+                canvas = document.getElementById('myCanvas');
+                context = canvas.getContext('2d');
+                context.font = 'italic 28px Calligraphic';
+                context.fillstyle = "red"
+                context.strokeText('Welcome to our portfolio page!', 10, 50);
+                }
+            </script>
+<div align="left">
+        <body onload="WelcomeText();"></body> 
+        <canvas id="myCanvas" width="600" height="80"> </canvas>
+<hr />
+<p>Here you can see our artwork: </p>
+<body>
+    <img src="https://bit.ly/2NbSlOU" style="width:512px;height:340px;border:0" alt="Vesper-End artwork" draggable=false> 
+    <img src="Images\Braid.png" style="width:343px;height:340px;border:0" alt="Braid" draggable=false>
+    <img src="Images\heli-kauppinen-pikselityomockup.jpg" style="width:340px;height:340px;border:0" alt="Pixel work" draggable=false>
+</body>
+<!---->
+<body bgcolor="lightgrey">
+    <div class="CenterAll">
+        <div class="Outer">
+            <div style="border:1px solid black;"></div><div class="Column">
+                <p class="pad">
+                    Loremipsumdolor sit amet, temporet libero. Curabiturportaposueredictum. Morbicursusnullaauctornequesemper euismod. Nullamodiotortor, venenatisat vehiculapulvinar, lobortisnecnisl. Nam consequatcursusnibhquistincidunt. Vivamussedliberoquismaurisfacilisisplacerat.
+                </p>
+            </div><div class="Column">
+
+                <p class="pad">.<p>Portfolion tarkoitus:
+    <ol> <li>Esitellä taitoja.</li> <li>Luoda kiinnostusta.</li> <li> Ota yhteyttä! </li>   </ol> </p>
+            </div><div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
+<br>Contact us! <br> Email: name.kamk.fi <br> LinkedIn: Sofia Pietarinen & Heli Kauppinen
+ <!-- Part about geolocation below: -->
+<body bgcolor="black" text="white">
+
+
+    <meta charset="utf-8">
+    <title>Finding Me</title>
+    <script>
+        function getLocation()
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getPosition);
+        } else { // Not supported
+            alert("Oops! This browser does not support HTML Geolocation.");
+        }
+              }
+        function getPosition(position) {
+            document.getElementById("location").innerHTML =
+                "Latitude: " + position.coords.latitude + "<br>" +
+                "Longitude: " + position.coords.longitude;
+        }
+        // To add catchError(positionError) function</script>
+
+    <h2>Finding Me</h2>
+    <button onclick="getLocation()">Where am I?</button>
+    <p id="location"></p>
+
+
+</body>
+</html>
