@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <head>
     <title> portfolio</title>
@@ -33,8 +33,8 @@
         function ButtonFunction() {
             var PersonName = prompt("What is your name?");
             if (PersonName != null) {
-                document.getElementById("demo").innerHTML =
-    "Hello " + PersonName + "! How are you today?";
+                document.getElementById("buttonrespond").innerHTML =
+    "Hello " + PersonName + "!";
        
             }
         }
@@ -83,65 +83,83 @@
 
 <button onclick="ButtonFunction()">Prompt</button>
 <br>
-<p id="demo"></p>
+<p id="buttonrespond"></p>
 <!---->
 <body bgcolor="lightgrey">
     <div class="CenterAll">
         <div class="Outer">
             <div style="border:1px solid grey;"></div><div class="Column">
                 <p class="pad">
-                    Loremipsumdolor sit amet, temporet libero. Curabiturportaposueredictum. Morbicursusnullaauctornequesemper euismod. Nullamodiotortor, venenatisat vehiculapulvinar, lobortisnecnisl. Nam consequatcursusnibhquistincidunt. Vivamussedliberoquismaurisfacilisisplacerat.
-                </p>
+                 </p>
+                 <!-- Part about geolocation below: -->
+<body bgcolor="black" text="white">
+
+
+        <meta charset="utf-8">
+        <title>Finding Me</title>
+        <script>
+            function getLocation()
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(getPosition);
+            } else { // Not supported
+                alert("Oops! This browser does not support HTML Geolocation.");
+            }
+                  }
+            function getPosition(position) {
+                document.getElementById("location").innerHTML =
+                    "Latitude: " + position.coords.latitude + "<br>" +
+                    "Longitude: " + position.coords.longitude;
+            }
+            // To add catchError(positionError) function</script>
+    
+        <h2>Finding Me</h2>
+        <button onclick="getLocation()">Where am I?</button>
+        <p id="location"></p>
+        <body>
+            <!--Calling out a canvas for prettier text-->
+        <head>
+            <script>
+                function HelloText()
+                {
+                var canvas, context;
+                canvas = document.getElementById('myCanvas');
+                context = canvas.getContext('2d');
+                context.font = '24px Arial';
+                context.strokeText('Drop your own smol doggo below!', 110, 50);
+                }
+            </script>
+        
+        
+        
             </div><div class="Column">
 
-                <p class="pad">.<p>Portfolion tarkoitus:
+                <p class="pad"><p>Portfolion tarkoitus:
     <ol> <li>Esitellä taitoja.</li> <li>Luoda kiinnostusta.</li> <li> Ota yhteyttä! </li>   </ol> </p>
             </div><div class="clear"></div>
         </div>
     </div>
 </body>
 </html>
-<br>Contact us! <br> Email: name.kamk.fi <br> LinkedIn: Sofia Pietarinen & Heli Kauppinen
- <!-- Part about geolocation below: -->
-<body bgcolor="black" text="white">
-
-
-    <meta charset="utf-8">
-    <title>Finding Me</title>
-    <script>
-        function getLocation()
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(getPosition);
-        } else { // Not supported
-            alert("Oops! This browser does not support HTML Geolocation.");
+<br>Contact us! <br> Email: name.kamk.fi <br> 
+<style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
         }
-              }
-        function getPosition(position) {
-            document.getElementById("location").innerHTML =
-                "Latitude: " + position.coords.latitude + "<br>" +
-                "Longitude: " + position.coords.longitude;
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 2px;
         }
-        // To add catchError(positionError) function</script>
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+<table><tr><th>LinkedIn:</th>   </tr> <tr> <td>Sofia Pietarinen</td></tr> <td>Heli Kauppinen</td></table>
 
-    <h2>Finding Me</h2>
-    <button onclick="getLocation()">Where am I?</button>
-    <p id="location"></p>
-    <body>
-        <!--Calling out a canvas for prettier text-->
-    <head>
-        <script>
-            function HelloText()
-            {
-            var canvas, context;
-            canvas = document.getElementById('myCanvas');
-            context = canvas.getContext('2d');
-            context.font = '24px Arial';
-            context.strokeText('Drop your own smol doggo below!', 110, 50);
-            }
-        </script>
-    
-    
-    
+
     </p>
     <div align="center">
         <body onload="HelloText();"></body> 
