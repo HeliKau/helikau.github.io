@@ -1,0 +1,63 @@
+<!DOCTYPE htlm>
+<html>
+<body>
+    <!--Calling out a canvas for prettier text-->
+<head>
+    <script>
+        function HelloText()
+        {
+        var canvas, context;
+        canvas = document.getElementById('myCanvas');
+        context = canvas.getContext('2d');
+        context.font = '24px Arial';
+        context.strokeText('Drop your own smol doggo below!', 110, 50);
+        }
+    </script>
+<h2>Hello World!</h2>
+
+<img src="Images\Screenshot_236.jpg" style="width:128px;height:128px;border:0" alt="Doggo" draggable=false> <p></p>
+<button>
+<a href="https://i.kym-cdn.com/entries/icons/facebook/000/021/033/Screenshot_236.jpg">Doggo</a>
+</button>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra. Id interdum velit laoreet id donec. Duis ut diam quam nulla porttitor. Viverra tellus in hac habitasse platea dictumst. Dignissim enim sit amet venenatis urna cursus. In mollis nunc sed id semper risus. Eu turpis egestas pretium aenean pharetra magna ac placerat. Integer quis auctor elit sed vulputate mi sit amet mauris. Faucibus nisl tincidunt eget nullam non nisi est sit.
+<br>
+Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. At consectetur lorem donec massa. Dolor sed viverra ipsum nunc aliquet bibendum. Ultrices eros in cursus turpis massa. Morbi tristique senectus et netus et malesuada fames ac. Consectetur adipiscing elit duis tristique. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Vulputate sapien nec sagittis aliquam. Morbi tristique senectus et netus et malesuada fames. Augue ut lectus arcu bibendum. Blandit massa enim nec dui nunc. Quis auctor elit sed vulputate mi sit. Nec sagittis aliquam malesuada bibendum arcu vitae. Sed nisi lacus sed viverra tellus in hac habitasse platea. Interdum varius sit amet mattis vulputate enim nulla aliquet porttitor. Arcu risus quis varius quam quisque. Ultrices tincidunt arcu non sodales neque sodales ut. Lectus proin nibh nisl condimentum id venenatis a. Viverra suspendisse potenti nullam ac tortor vitae purus.
+
+</p>
+<div align="center">
+    <body onload="HelloText();"></body> 
+    <canvas id="myCanvas" width="600" height="80"> </canvas>
+<br>
+<style>
+    #div1, #div2 { 
+        float left;
+        background-color: rgb(215, 232, 240); width:64px; padding:15px; border:1px solid;
+height:80px"
+    }
+</style>
+<!--Creating two areas that allow for an image to be moved between the two-->
+<script> 
+function permitadrop()
+{
+    event.preventDefault();
+}
+function dragthere(event)
+{
+event.dataTransfer.setData("text", event.target.id);
+}
+function drophere(event)
+{
+    event.preventDefault();
+    var data=event.dataTransfer.getData("text")
+    event.target.appendChild(document.getElementById(data));
+}
+</script>
+<div id="div1" ondrop="drophere(event)" ondragover="permitadrop(event)">
+<img src="Images\Screenshot_236.jpg" id="drag1" style="width:64px;height:64px;border:0" alt="Draggable Doggo" draggable="true" ondragstart="dragthere(event)"> </div>
+<br>
+<div id="div2" ondragover="permitadrop(event)" ondrop="drophere(event)" style=></div>
+</div>
+</head>
+</body>
+</html>
